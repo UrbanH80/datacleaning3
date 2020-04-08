@@ -90,4 +90,4 @@ meandata <- group_by(traintest1, activity, subject)  %>%      #use group_by to g
         summarise_all(funs(mean))                             #using summarise_all() to apply to every variable
 
 
-
+write.table(meandata, "tidymeandata.txt", row.names = FALSE)    #writing out final tidy data table so it can be uploaded to github
